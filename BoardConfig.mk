@@ -55,6 +55,16 @@ BOARD_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
 
+# Kernel
+BOARD_BOOTCONFIG := \
+    androidboot.hardware=qcom \
+    androidboot.memcg=1 \
+    androidboot.usbcontroller=a600000.dwc3
+
+BOARD_KERNEL_CMDLINE := \
+    msm_geni_serial.con_enabled=0 \
+    video=vfb:640x400,bpp=32,memsize=3072000
+
 # Partitions
 BOARD_ASUS_DYNAMIC_PARTITIONS_PARTITION_LIST := product system system_ext
 BOARD_ASUS_DYNAMIC_PARTITIONS_SIZE := 6438256640
