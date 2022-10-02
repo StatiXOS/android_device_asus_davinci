@@ -296,6 +296,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks-V1-ndk_platform.vendor
 
+# Overlays
+PRODUCT_PACKAGES += \
+    FrameworksResTarget_Vendor \
+    WifiResTarget_cape \
+    WifiResTarget_spf
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
