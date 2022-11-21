@@ -434,8 +434,8 @@
 
     <!-- Volume section -->
 
-    <xi:include href="/vendor/etc/audio/DAVINCI/audio_policy_volumes_AI2202.xml"/>
-    <xi:include href="/vendor/etc/audio/DAVINCI/default_volume_tables_AI2202.xml"/>
+    <xi:include href="/vendor/etc/audio/sku_cape/audio_policy_volumes.xml"/>
+    <xi:include href="/vendor/etc/audio/sku_cape/default_volume_tables.xml"/>
 
     <!-- End of Volume section -->
 
