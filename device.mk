@@ -211,6 +211,9 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_USES_QCOM_HARDWARE := true
 PRODUCT_BOARD_PLATFORM := taro
 
+# Power
+$(call inherit-product, vendor/qcom/opensource/power/power-vendor-product.mk)
+
 # Shipping API
 BOARD_API_LEVEL := 31
 BOARD_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
