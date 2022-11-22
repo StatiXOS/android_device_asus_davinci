@@ -140,6 +140,26 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.backup.ntpServer="0.pool.ntp.org"
 
+# Init
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.asus.rc \
+    init.target.rc \
+    init.recovery.qcom.rc \
+    init.qcom.rc \
+    init.class_main.sh \
+    init.qcom.sh \
+    init.qcom.early_boot.sh \
+    init.qti.ufs.rc \
+    init.qti.kernel.rc \
+    ssgqmigd.rc \
+    ueventd.asus.rc \
+    ueventd.qcom.rc \
+    vendor_modprobe.sh
+
 # Kernel Binary
 TARGET_KERNEL_DIR ?= device/asus/davinci-kernel
 LOCAL_KERNEL := $(TARGET_KERNEL_DIR)/Image
