@@ -181,7 +181,9 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.lights.service
+    vendor.qti.hardware.lights.service \
+    libtinyxml \
+    lights.qcom
 
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
