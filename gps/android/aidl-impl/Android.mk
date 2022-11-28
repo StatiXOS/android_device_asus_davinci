@@ -29,14 +29,14 @@ LOCAL_SHARED_LIBRARIES := \
     android.hardware.gnss-V1-ndk_platform \
     liblog \
     libcutils \
-    libqti_vndfwk_detect_vendor \
+    libqti_vndfwk_detect.vendor \
     libutils \
     libloc_core \
     libgps.utils \
     libdl \
     liblocation_api
 
-LOCAL_CFLAGS += $(GNSS_CFLAGS)
+LOCAL_CFLAGS += $(GNSS_CFLAGS) -Wno-format
 
 include $(BUILD_SHARED_LIBRARY)
 
@@ -65,7 +65,7 @@ LOCAL_SHARED_LIBRARIES := \
     libutils \
     libgps.utils \
     liblocation_api \
-    libqti_vndfwk_detect_vendor \
+    libqti_vndfwk_detect.vendor \
     libbinder_ndk
 
 LOCAL_SHARED_LIBRARIES += \

@@ -262,15 +262,6 @@ bool XtraSystemStatusObserver::updateXtraThrottle(const bool enabled) {
     return ( LocIpc::send(*mXtraSender, (const uint8_t*)s.data(), s.size()) );
 }
 
-bool XtraSystemStatusObserver::notifySessionStart() {
-    if (!mReqStatusReceived) {
-        return true;
-    }
-
-    string s = "sessionstart";
-    return ( LocIpc::send(*mXtraSender, (const uint8_t*)s.data(), s.size()) );
-}
-
 inline bool XtraSystemStatusObserver::onStatusRequested(int32_t statusUpdated) {
     mReqStatusReceived = true;
 
@@ -358,6 +349,7 @@ void XtraSystemStatusObserver::subscribe(bool yes)
 
     if (yes) {
         mSystemStatusObsrvr->subscribe(subItemIdSet, this);
+
         unordered_set<DataItemId> reqItemIdSet;
         reqItemIdSet.insert(TAC_DATA_ITEM_ID);
 

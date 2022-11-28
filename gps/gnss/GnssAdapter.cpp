@@ -173,6 +173,7 @@ GnssAdapter::GnssAdapter() :
     mNfwCb(NULL),
     mIsE911Session(NULL),
     mIsMeasCorrInterfaceOpen(false),
+    mIsAntennaInfoInterfaceOpened(false),
     mQDgnssListenerHDL(nullptr),
     mCdfwInterface(nullptr),
     mDGnssNeedReport(false),
@@ -1141,11 +1142,15 @@ GnssAdapter::setConfig()
         mLocApi->setPositionAssistedClockEstimatorMode(
                 mLocConfigInfo.paceConfigInfo.enable);
 
-        // robust location to be disabled on bootup by default
+        // load robust location configuration from config file on first boot-up,
+        // e.g.: adapter.mLocConfigInfo.robustLocationConfigInfo.isValid is false
         if (mLocConfigInfo.robustLocationConfigInfo.isValid == false) {
             mLocConfigInfo.robustLocationConfigInfo.isValid = true;
-            mLocConfigInfo.robustLocationConfigInfo.enable = false;
-            mLocConfigInfo.robustLocationConfigInfo.enableFor911 = false;
+            bool robustLocationEnabled = (gpsConf.ROBUST_LOCATION_ENABLED & 0x01);
+            bool robustLocationE911Enabled = robustLocationEnabled ?
+                    ((gpsConf.ROBUST_LOCATION_ENABLED & 0x02) != 0) : false;
+            mLocConfigInfo.robustLocationConfigInfo.enable = robustLocationEnabled;
+            mLocConfigInfo.robustLocationConfigInfo.enableFor911 = robustLocationE911Enabled;
         }
         mLocApi->configRobustLocation(
                 mLocConfigInfo.robustLocationConfigInfo.enable,
@@ -2855,7 +2860,7 @@ GnssAdapter::suspendSessions()
     if (!mTimeBasedTrackingSessions.empty()) {
         // inform engine hub that GNSS session has stopped
         mEngHubProxy->gnssStopFix();
-        mLocApi->stopTimeBasedTracking(nullptr);
+        mLocApi->stopFix(nullptr);
         if (isDgnssNmeaRequired()) {
             mDgnssState &= ~DGNSS_STATE_NO_NMEA_PENDING;
         }
@@ -3004,6 +3009,13 @@ GnssAdapter::hasCallbacksToStartTracking(LocationAPI* client)
     return allowed;
 }
 
+bool
+GnssAdapter::isTrackingSession(LocationAPI* client, uint32_t sessionId)
+{
+    LocationSessionKey key(client, sessionId);
+    return (mTimeBasedTrackingSessions.find(key) != mTimeBasedTrackingSessions.end());
+}
+
 void
 GnssAdapter::reportPowerStateIfChanged()
 {
@@ -3053,7 +3065,6 @@ GnssAdapter::saveTrackingSession(LocationAPI* client, uint32_t sessionId,
     reportPowerStateIfChanged();
     // notify SystemStatus the engine tracking status
     getSystemStatus()->setTracking(isInSession());
-    mXtraObserver.notifySessionStart();
 }
 
 void
@@ -3240,10 +3251,6 @@ GnssAdapter::startTimeBasedTrackingMultiplex(LocationAPI* client, uint32_t sessi
                 it->second.powerMode < multiplexedPowerMode) {
                 multiplexedPowerMode = it->second.powerMode;
             }
-            //if not set or there is a new higher qualityLevelAccepted, then set the higher one
-            if (it->second.qualityLevelAccepted > multiplexedOptions.qualityLevelAccepted) {
-                multiplexedOptions.qualityLevelAccepted = it->second.qualityLevelAccepted;
-            }
         }
         bool updateOptions = false;
         // if session we are starting has smaller interval then next smallest
@@ -3255,11 +3262,6 @@ GnssAdapter::startTimeBasedTrackingMultiplex(LocationAPI* client, uint32_t sessi
         // if session we are starting has smaller powerMode then next smallest
         if (options.powerMode < multiplexedPowerMode) {
             multiplexedOptions.powerMode = options.powerMode;
-            updateOptions = true;
-        }
-        // if session we are starting has higher qualityLevelAccepted then next highest
-        if (options.qualityLevelAccepted > multiplexedOptions.qualityLevelAccepted) {
-            multiplexedOptions.qualityLevelAccepted = options.qualityLevelAccepted;
             updateOptions = true;
         }
         if (updateOptions) {
@@ -3636,11 +3638,8 @@ GnssAdapter::stopTracking(LocationAPI* client, uint32_t id)
     // inform engine hub that GNSS session has stopped
     mEngHubProxy->gnssStopFix();
 
-    // client is nullptr when we want to stop any tracking session,
-    // e.g. when suspend.
-    mLocApi->stopTimeBasedTracking((nullptr == client) ? nullptr :
-            new LocApiResponse(*getContext(),
-                               [this, client, id] (LocationError err) {
+    mLocApi->stopFix(new LocApiResponse(*getContext(),
+                     [this, client, id] (LocationError err) {
         reportResponse(client, err, id);
     }));
 
@@ -6683,8 +6682,13 @@ uint32_t GnssAdapter::antennaInfoInitCommand(const antennaInfoCb antennaInfoCall
             mAdapter.reportGnssAntennaInformation(mAntennaInfoCb);
         }
     };
-    sendMsg(new MsgInitAi(antennaInfoCallback, *this));
-    return ANTENNA_INFO_SUCCESS;
+    if (mIsAntennaInfoInterfaceOpened) {
+        return ANTENNA_INFO_ERROR_ALREADY_INIT;
+    } else {
+        mIsAntennaInfoInterfaceOpened = true;
+        sendMsg(new MsgInitAi(antennaInfoCallback, *this));
+        return ANTENNA_INFO_SUCCESS;
+    }
 }
 
 void
