@@ -122,13 +122,24 @@ PRODUCT_PACKAGES += \
     libdisplayconfig.qti.vendor \
     libqdutils \
     libqservice \
+    vendor.display.config@1.11.vendor \
     vendor.display.config@2.0.vendor \
+    vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.config.vendor \
     init.qti.display_boot.sh \
     init.qti.display_boot.rc \
+    vendor.qti.hardware.display.config-V1-ndk.vendor \
+    vendor.qti.hardware.display.config-V2-ndk.vendor \
+    vendor.qti.hardware.display.config-V3-ndk.vendor \
+    vendor.qti.hardware.display.config-V4-ndk.vendor \
+    vendor.qti.hardware.display.config-V5-ndk.vendor \
+    vendor.qti.hardware.display.config-V6-ndk.vendor \
+    vendor.qti.hardware.display.config-V1-ndk_platform.vendor \
     vendor.qti.hardware.display.config-V2-ndk_platform.vendor \
+    vendor.qti.hardware.display.config-V3-ndk_platform.vendor \
+    vendor.qti.hardware.display.config-V4-ndk_platform.vendor \
     vendor.qti.hardware.display.config-V5-ndk_platform.vendor \
-    vendor.qti.hardware.memtrack-service \
+    vendor.qti.hardware.display.config-V6-ndk_platform.vendor \
     libfilefinder \
     vendor.qti.hardware.display.demura-service.rc \
     vendor.qti.hardware.display.demura-service.xml \
