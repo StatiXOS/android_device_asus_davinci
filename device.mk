@@ -179,6 +179,10 @@ PRODUCT_PACKAGES += \
     android.hardware.security.keymint-V1-ndk_platform.vendor \
     libkeymaster_messages.vendor
 
+# Lights
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.lights.service
+
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
