@@ -6,8 +6,6 @@
 
 DEVICE_PATH := device/asus/davinci
 
-include build/make/target/board/BoardConfigMainlineCommon.mk
-
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
@@ -100,6 +98,13 @@ DEVICE_MANIFEST_FILE += \
 DEVICE_MATRIX_FILE := \
     $(DEVICE_PATH)/vintf/compatibility_matrix.xml
 
+# Hacks
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
+# Hardware
+TARGET_BOARD_PLATFORM := taro
+
 # Kernel
 TARGET_NO_KERNEL_OVERRIDE := true
 TARGET_NO_KERNEL := false
@@ -107,11 +112,8 @@ TARGET_NO_KERNEL := false
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
+    androidboot.selinux=permissive \
     androidboot.usbcontroller=a600000.dwc3
-
-BOARD_KERNEL_CMDLINE := \
-    msm_geni_serial.con_enabled=0 \
-    video=vfb:640x400,bpp=32,memsize=3072000
 
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
@@ -123,7 +125,7 @@ BOARD_BUILD_VENDOR_RAMDISK_IMAGE := true
 KERNEL_MODULE_DIR := $(TARGET_KERNEL_DIR)
 KERNEL_MODULES := $(wildcard $(KERNEL_MODULE_DIR)/*.ko)
 
-BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(KERNEL_MODULE_DIR)/modules.vendor_blocklist.msm.waipio
+BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(KERNEL_MODULE_DIR)/vendor_dlkm.modules.blocklist
 
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_MODULE_DIR)/vendor_boot.modules.load))
 ifndef BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD
@@ -166,8 +168,8 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 TARGET_COPY_OUT_VENDOR := vendor
 
-# Platform
-TARGET_BOARD_PLATFORM := taro
+# Radio
+ENABLE_VENDOR_RIL_SERVICE := true
 
 # Recovery
 BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
@@ -189,12 +191,16 @@ SOONG_CONFIG_ufsbsg_ufsframework := bsg
 # WLAN
 BOARD_HAS_QCOM_WLAN := true
 PRODUCT_VENDOR_MOVE_ENABLED := true
-TARGET_WLAN_CHIP := qca6490
-WIFI_DRIVER_BUILT := qca_cld3
-WIFI_DRIVER_DEFAULT := qca_cld3
-WIFI_DRIVER_INSTALL_TO_KERNEL_OUT := true
 WIFI_DRIVER_STATE_CTRL_PARAM := "/dev/wlan"
+WIFI_HIDL_FEATURE_AWARE := true
+WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_DRIVER_STATE_ON := "ON"
 WIFI_DRIVER_STATE_OFF := "OFF"
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB_EVENT := "ON"
 BOARD_HOSTAPD_PRIVATE_LIB_EVENT := "ON"
+BOARD_WLAN_DEVICE := qcwcn
+BOARD_HOSTAPD_DRIVER := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+WPA_SUPPLICANT_VERSION := VER_0_8_X
