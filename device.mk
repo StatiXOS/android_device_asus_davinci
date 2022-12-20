@@ -298,6 +298,8 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    CarrierConfigResCommon \
+    FrameworksResCommon \
     FrameworksResTarget_Vendor \
     WifiResTarget_cape \
     WifiResTarget_spf \
