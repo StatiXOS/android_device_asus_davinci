@@ -9,11 +9,18 @@ include build/make/target/board/BoardConfigMainlineCommon.mk
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
+    boot \
+    dtbo \
+    odm \
     product \
+    recovery \
     system \
     system_ext \
     vbmeta \
-    vbmeta_system
+    vbmeta_system \
+    vendor_boot \
+    vendor_dlkm \
+    vendor
 
 # AVB
 BOARD_AVB_ENABLE := true
