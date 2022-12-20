@@ -302,6 +302,7 @@ PRODUCT_PACKAGES += \
     WifiResTarget_cape \
     WifiResTarget_spf \
     Zenfone9Frameworks \
+    Zenfone9Settings \
     Zenfone9SettingsProvider
 
 # Partitions
