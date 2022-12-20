@@ -301,6 +301,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
     FrameworksResCommon \
     FrameworksResTarget_Vendor \
+    TelephonyResCommon \
     WifiResTarget_cape \
     WifiResTarget_spf \
     Zenfone9Frameworks \
