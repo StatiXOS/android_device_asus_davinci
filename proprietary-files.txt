@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from Zenfone 9 (32.2030.2030.26). OTAs to extract from can be found
+## are from Zenfone 9 (32.2050.2050.34). OTAs to extract from can be found
 ## here: https://www.asus.com/Mobile/Phones/ZenFone/Zenfone-9/HelpDesk_Download
 
 # ADSPRPC
@@ -255,9 +255,9 @@ vendor/lib64/libagm_pcm_plugin.so
 vendor/lib64/libagmmixer.so
 vendor/lib64/libar-acdb.so
 vendor/lib64/libar-gpr.so
-vendor/lib64/libar-gsl.so
+-vendor/lib64/libar-gsl.so
 vendor/lib64/libar-pal.so
-vendor/lib64/libats.so
+-vendor/lib64/libats.so
 vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libbatterylistener.so
 vendor/lib64/libcapiv2svacnnvendor.so
@@ -269,7 +269,7 @@ vendor/lib64/libeai_float.so
 vendor/lib64/libfmpal.so
 vendor/lib64/liblistensoundmodel2vendor.so
 vendor/lib64/liblx-ar_util.so
-vendor/lib64/liblx-osal.so
+-vendor/lib64/liblx-osal.so
 vendor/lib64/libmcs.so
 vendor/lib64/libpalclient.so
 vendor/lib64/libqtigefar.so
@@ -903,7 +903,7 @@ vendor/lib64/hw/fingerprint.default.so
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixhwfingerprint.so
-vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
+vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so|6c55c5ef38b292b8e2a377e072f0d914d1e934cd|3b1e77c30180f626ce5990df640071e9cf8696a6
 
 # GPS - LA.VENDOR.1.0.r1-16000-WAIPIO.QSSI13.0
 vendor/bin/edgnss-daemon|73b0d7796b147933dfb2b41033fae71e76711497
@@ -960,6 +960,12 @@ vendor/lib64/vendor.qti.gnss-V1-ndk_platform.so|11bd336a286bbdf0694fe4eec741c80a
 vendor/lib64/vendor.qti.gnss-service.so|640f8f6c32a3d07b082d8268cd48168781bbb3b6
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so|ef866bab2186db1b2c09477e36fef20945fa671e
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.1.so|0677ebfe099cdaa6c3776d0bd5318044a4220918
+
+# Hotword Enrollment
+product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
+product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
+system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # IMS
 vendor/bin/ims_rtp_daemon
@@ -1045,21 +1051,7 @@ vendor/etc/vintf/manifest/vendor.qti.hardware.limits-service.xml
 vendor/lib64/vendor.qti.hardware.limits@1.0.so
 vendor/lib64/vendor.qti.hardware.limits@1.1.so
 
-# MDM
-vendor/bin/ks
-
-# MMI
-vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
-vendor/bin/mmid
-vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc
-vendor/etc/permissions/android.hardware.light.xml
-vendor/etc/permissions/vendor.qti.hardware.factory.xml
-vendor/lib64/vendor.qti.hardware.factory@1.0.so
-vendor/lib64/vendor.qti.hardware.factory@1.1.so
-
 # Media
-vendor/bin/hw/qconfigservice
-vendor/etc/init/qconfig.rc
 vendor/etc/media_cape/video_system_specs.json
 vendor/etc/media_taro/video_system_specs.json
 vendor/etc/media_codecs.xml
@@ -1075,9 +1067,6 @@ vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_cape.xml
 vendor/etc/media_profiles_taro.xml
-vendor/lib64/libqc2vppfilter.so
-vendor/lib64/libqconfigclient.so
-vendor/lib64/vendor.qti.hardware.qconfig@1.0.so
 
 # Memory
 vendor/lib64/libvmmem.so
@@ -1150,16 +1139,6 @@ vendor/lib64/vendor.qti.qesdhal@1.1-impl.so
 vendor/lib64/vendor.qti.qesdhal@1.1.so
 vendor/lib64/vendor.qti.qesdsys-V1-ndk_platform.so
 
-# QDMA
-vendor/bin/qcc-trd
-vendor/etc/init/init.qdmastats.rc
-vendor/lib64/libqdma_file_agent.so
-
-# QGuard
-vendor/bin/qguard
-vendor/etc/init/qguard.rc
-vendor/etc/qguard.json
-
 # QMI
 vendor/bin/init.qti.write.sh
 vendor/bin/irsc_util
@@ -1193,8 +1172,6 @@ vendor/lib64/libsystem_health_mon.so
 vendor/bin/hw/qcrilNrd
 vendor/bin/modemManager
 vendor/bin/mstatdaemon
-vendor/bin/qtigetprop
-vendor/bin/qtisetprop
 vendor/etc/init/modemManager.rc
 vendor/etc/init/mstatdaemon.rc
 vendor/etc/init/qcrilNrd.rc
@@ -1306,7 +1283,6 @@ vendor/lib64/libQTEEConnector_listener.so
 vendor/lib64/libQTEEConnector_vendor.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
-
 # QSEECOM
 vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
 vendor/bin/qseecomd
@@ -1319,7 +1295,10 @@ vendor/lib64/libGPreqcancel_svc.so
 vendor/lib64/libQSEEComAPI.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
+vendor/lib64/libops.so
+vendor/lib64/libqisl.so
 vendor/lib64/librpmb.so
+vendor/lib64/libspl.so
 vendor/lib64/libssd.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
@@ -1344,16 +1323,9 @@ vendor/lib64/libscveObjectTracker_stub.so
 
 # SMC Invoke
 vendor/etc/ssg/ta_config.json
-vendor/etc/ssg/tz_whitelist.json
 vendor/lib64/libminkdescriptor.so
 vendor/lib64/libminksocket_vendor.so
-vendor/lib64/libnative-api.so
 vendor/lib64/libqcbor.so
-
-# SSR
-vendor/bin/ssr_diag
-vendor/bin/ssr_setup
-vendor/bin/subsystem_ramdump
 
 # Sensors
 vendor/bin/init.qcom.sensors.sh
@@ -1462,19 +1434,6 @@ vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libssc.so
 vendor/lib64/sensors.ssc.so
 
-# SecureMSM (EID)
-vendor/bin/hw/vendor.qti.hardware.eid@1.0-service
-vendor/etc/init/vendor.qti.hardware.eid@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.eid@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.eid@1.0.so
-
-# SecureMSM (GPQESE)
-vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
-vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
-vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
-vendor/lib64/vendor.qti.esepowermanager@1.0.so
-vendor/lib64/vendor.qti.esepowermanager@1.1.so
-
 # SecureMSM (SECDISP)
 vendor/bin/hw/vendor.qti.hardware.trustedui@1.0-service-qti
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
@@ -1491,31 +1450,10 @@ vendor/lib64/libTrustedUITZ.so
 vendor/lib64/libTrustedUIVM.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libsi.so
-vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.0.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.1.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.2.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
-
-# SecureMSM
-vendor/bin/hdcp1prov
-vendor/bin/hdcp2p2prov
-vendor/lib64/libbase64.so
-vendor/lib64/libcpion.so
-vendor/lib64/libhdcp1prov.so
-vendor/lib64/libhdcp2p2prov.so
-vendor/lib64/libhdcpsrm.so
-vendor/lib64/libops.so
-vendor/lib64/libqisl.so
-vendor/lib64/libspl.so
-vendor/lib64/libtzdrmgenprov.so
-
-# Soter
-vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
-vendor/bin/vendor.qti.hardware.soter@1.0-provision
-vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
 # TFTP
 vendor/bin/tftp_server
@@ -1576,6 +1514,8 @@ vendor/firmware/widevine.b07
 vendor/firmware/widevine.b08
 vendor/firmware/widevine.mbn
 vendor/firmware/widevine.mdt
+vendor/lib64/mediadrm/libwvdrmengine.so
+vendor/lib64/libcpion.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libtrustedapploader.so
 vendor/lib64/libwvhidl.so
