@@ -15,6 +15,9 @@ $(call inherit-product, device/asus/davinci/device.mk)
 $(call inherit-product, vendor/statix/config/common.mk)
 $(call inherit-product, vendor/statix/config/gsm.mk)
 
+# Inherit from our proprietary files directory.
+$(call inherit-product, vendor/asus/davinci/davinci-vendor.mk)
+
 PRODUCT_BRAND := asus
 PRODUCT_DEVICE := davinci
 PRODUCT_MANUFACTURER := asus

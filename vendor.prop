@@ -1,0 +1,49 @@
+# Adreno
+ro.hardware.egl=adreno
+ro.hardware.vulkan=adreno
+ro.opengles.version=196610
+graphics.gpu.profiler.support=true
+
+# Bluetooth
+persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2
+persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
+persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=true
+persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true
+persist.sys.fflag.override.settings_bluetooth_hearing_aid=true
+ro.vendor.bluetooth.csip_qti=true
+
+# Camera
+ro.camera.enableCamera1MaxZsl=1
+
+# DPM
+persist.vendor.dpm.vndr.idletimer.mode=default
+persist.vendor.dpm.vndr.halservice.enable=1
+persist.vendor.dpm.vndr.feature=11
+
+# DRM
+drm.service.enabled=true
+
+# FRP
+ro.frp.pst=/dev/block/bootdevice/by-name/frp
+
+# Fuse
+persist.sys.fuse.passthrough.enable=true
+
+# Incremental FS
+ro.incremental.enable=yes
+
+# Media
+debug.stagefright.c2inputsurface=-1
+ro.mediaserver.64b.enable=true
+
+# RCS
+persist.vendor.rcs.singlereg.feature=1
+
+# Render Engine
+debug.renderengine.backend=skiaglthreaded
+
+# SoC
+ro.soc.manufacturer=QTI
+
+# SPU
+vendor.gatekeeper.disable_spu=true
