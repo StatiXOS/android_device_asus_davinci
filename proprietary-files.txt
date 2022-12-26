@@ -1018,7 +1018,6 @@ system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # IMS
 #system_ext/app/ImsRcsService/ImsRcsService.apk
-system_ext/app/QtiTelephony/QtiTelephony.apk
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 #system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
 system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml
@@ -1342,9 +1341,18 @@ vendor/lib64/libsmemlog.so
 vendor/lib64/libsystem_health_mon.so
 
 # QCRIL
+system_ext/app/QtiTelephony/QtiTelephony.apk	
+system_ext/app/QtiTelephonyService/QtiTelephonyService.apk	
+system_ext/etc/permissions/qcrilhook.xml	
+system_ext/etc/permissions/qti_libpermissions.xml	
+system_ext/etc/permissions/qti_permissions.xml	
+system_ext/framework/qcrilhook.jar	
+system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/hw/qcrilNrd
 vendor/bin/modemManager
 vendor/bin/mstatdaemon
+vendor/bin/qtigetprop	
+vendor/bin/qtisetprop	
 vendor/etc/init/modemManager.rc
 vendor/etc/init/mstatdaemon.rc
 vendor/etc/init/qcrilNrd.rc
