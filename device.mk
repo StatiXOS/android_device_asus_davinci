@@ -322,7 +322,8 @@ PRODUCT_PACKAGES += \
     libjson \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti.vendor \
-    libvndfwk_detect_jni.qti_vendor
+    libvndfwk_detect_jni.qti_vendor \
+    libqti_vndfwk_detect_vendor
 
 # Ramdisk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
