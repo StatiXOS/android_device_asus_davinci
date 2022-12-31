@@ -6,5 +6,11 @@
 # Fingerprint
 /dev/goodix_fp    u:object_r:fingerprint_device:s0
 
+# NFC
+/dev/pn553                                                                                   u:object_r:nfc_device:s0
+
+# Secure Element
+/(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element@1\.1-service                u:object_r:hal_secure_element_default_exec:s0
+
 # USB
 /vendor/bin/hw/android\.hardware\.usb\.gadget\@1\.[0-2]-service-davinci    u:object_r:vendor_hal_usb_qti_exec:s0
