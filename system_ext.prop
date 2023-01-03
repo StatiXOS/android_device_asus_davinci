@@ -1,0 +1,4 @@
+# Telephony
+ril.subscription.types=RUIM,RUIM
+ro.telephony.sim_slots.count=2
+telephony.active_modems.max_count=2
