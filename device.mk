@@ -447,7 +447,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
 
 # Vibrator
-$(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
+$(call inherit-product, $(LOCAL_PATH)/vibrator/vibrator-vendor-product.mk)
 
 # WLAN
 PRODUCT_COPY_FILES += \
