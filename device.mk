@@ -159,6 +159,7 @@ PRODUCT_COPY_FILES += \
 
 # Fastboot
 PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.1-impl-mock \
     fastbootd
 
 # Fingerprint
