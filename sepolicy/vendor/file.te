@@ -1,0 +1,2 @@
+# Camera
+type vendor_proc_camera_file, proc_type, fs_type;
