@@ -1,0 +1,3 @@
+# Fingerprint
+vendor.gf.                                      u:object_r:vendor_fingerprint_prop:s0
+vendor.goodix.					u:object_r:vendor_fingerprint_prop:s0

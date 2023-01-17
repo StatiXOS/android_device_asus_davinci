@@ -1,2 +1,5 @@
 # Display (Pixelworks)
 type hal_display_iris_hwservice, hwservice_manager_type;
+
+# Fingerprint
+type hal_fingerprint_ext_hwservice, hwservice_manager_type;
