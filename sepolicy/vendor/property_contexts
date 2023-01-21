@@ -1,7 +1,31 @@
+# Audio
+vendor.use.audio.eu.parameters          u:object_r:vendor_audio_prop:s0
+
 # Camera
 vendor.asus.tel.antenna				u:object_r:vendor_camera_prop:s0
 vendor.camera.					u:object_r:vendor_camera_prop:s0
 
+# Display (Pixelworks)
+persist.sys.display.iris    u:object_r:vendor_display_prop:s0
+
 # Fingerprint
 vendor.gf.                                      u:object_r:vendor_fingerprint_prop:s0
 vendor.goodix.					u:object_r:vendor_fingerprint_prop:s0
+
+# GPS
+persist.vendor.asus.agps.    u:object_r:vendor_gps_prop:s0
+persist.vendor.asus.gps.     u:object_r:vendor_gps_prop:s0
+vendor.gps.                  u:object_r:vendor_gps_prop:s0
+
+# RIL
+vendor.tel.sw.                      u:object_r:vendor_radio_prop:s0
+ro.vendor.csc.modemhash             u:object_r:vendor_radio_prop:s0
+vendor.asus.operator.iso-country    u:object_r:vendor_radio_prop:s0
+
+# Sensors
+vendor.proximity      u:object_r:vendor_sensors_prop:s0
+vendor.light.	      u:object_r:vendor_sensors_prop:s0
+
+# Thermal
+vendor.thermal.current.perf.conf      u:object_r:vendor_thermal_prop:s0
+vendor.thermal.engine.version         u:object_r:vendor_thermal_prop:s0
