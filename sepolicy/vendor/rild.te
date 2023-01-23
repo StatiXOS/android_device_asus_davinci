@@ -1,2 +1,4 @@
 set_prop(rild, log_prop)
 set_prop(rild, vendor_radio_prop)
+set_prop(rild, vendor_gps_prop)
+
