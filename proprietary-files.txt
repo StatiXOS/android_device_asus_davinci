@@ -1397,7 +1397,6 @@ vendor/lib64/libsmemlog.so
 vendor/lib64/libsystem_health_mon.so
 
 # QCRIL
-system_ext/app/QtiTelephony/QtiTelephony.apk	
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk	
 system_ext/etc/permissions/qcrilhook.xml	
 system_ext/etc/permissions/qti_libpermissions.xml	
