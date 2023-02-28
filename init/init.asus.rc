@@ -29,6 +29,9 @@ on fs
 on post-fs-data
     # Fingerprint
     mkdir /data/vendor/goodix 0777 system system
+    # Set HDR node permissions
+    chmod 0666 /sys/class/asus_fod/hdr_mode
+    chmod 0666 /sys/class/asus_fod/hbm_mode
 
     # Load calibration file
     write /sys/class/sensors/psensor/load_cal 1
