@@ -154,9 +154,9 @@ volume index from 0 to 100.
     <volume stream="AUDIO_STREAM_RING" deviceCategory="DEVICE_CATEGORY_HEARING_AID"
                                        ref="DEFAULT_HEARING_AID_VOLUME_CURVE"/>
     <volume stream="AUDIO_STREAM_MUSIC" deviceCategory="DEVICE_CATEGORY_HEADSET">
-        <point>1,-7500</point>
-        <point>33,-5000</point>
-        <point>66,-2500</point>
+        <point>1,-6750</point>
+        <point>33,-4500</point>
+        <point>66,-2250</point>
         <point>100,0</point>
     </volume>
     <volume stream="AUDIO_STREAM_MUSIC" deviceCategory="DEVICE_CATEGORY_HEADSET_nonEU">
@@ -180,16 +180,16 @@ volume index from 0 to 100.
         <point>100,0</point>
     </volume>
     <volume stream="AUDIO_STREAM_MUSIC" deviceCategory="DEVICE_CATEGORY_USB_HEADSET">
-        <point>1,-7400</point>
+        <point>1,-7500</point>
         <point>33,-5000</point>
         <point>66,-2500</point>
         <point>100,0</point>
     </volume>
     <volume stream="AUDIO_STREAM_MUSIC" deviceCategory="DEVICE_CATEGORY_ACCY_EU">
-        <point>1,-7400</point>
-        <point>33,-5300</point>
-        <point>66,-3050</point>
-        <point>100,-800</point>
+        <point>1,-6750</point>
+        <point>33,-4500</point>
+        <point>66,-2250</point>
+        <point>100,0</point>
     </volume>
     <volume stream="AUDIO_STREAM_MUSIC" deviceCategory="DEVICE_CATEGORY_EXT_MEDIA"
                                         ref="DEFAULT_MEDIA_VOLUME_CURVE"/>
