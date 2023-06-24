@@ -35,3 +35,4 @@ on post-fs-data
 
 on property:sys.boot_completed=1
     write /sys/class/asuslib/boot_completed 1
+    write /sys/devices/platform/soc/990000.i2c/i2c-0/0-0038/fts_game_mode 1
