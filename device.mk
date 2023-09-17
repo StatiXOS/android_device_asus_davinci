@@ -322,6 +322,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks-V1-ndk_platform.vendor
 
+# QCRIL
+PRODUCT_PACKAGES += \
+    QcRilAm
+
 # Overlays
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
