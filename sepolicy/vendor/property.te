@@ -4,8 +4,5 @@ vendor_internal_prop(vendor_fingerprint_prop)
 # GPS
 vendor_internal_prop(vendor_gps_prop)
 
-# Iris
-vendor_public_prop(vendor_iris_prop)
-
 # Thermal
 vendor_internal_prop(vendor_thermal_prop)
