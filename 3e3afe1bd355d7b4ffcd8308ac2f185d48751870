@@ -16,6 +16,24 @@
       "message": "There will be a vendorcompat for lite variant in AOSP\nhttps://android.googlesource.com/platform/prebuilts/misc/+/e50c7362efa1580324ad9e12eb73859ba98b0dbf",
       "revId": "3e3afe1bd355d7b4ffcd8308ac2f185d48751870",
       "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a68b148_06cd17b6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-12-02T17:04:26Z",
+      "side": 1,
+      "message": "should we pick that?",
+      "parentUuid": "5ddbef5e_4f360cf0",
+      "revId": "3e3afe1bd355d7b4ffcd8308ac2f185d48751870",
+      "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
     }
   ]
 }
