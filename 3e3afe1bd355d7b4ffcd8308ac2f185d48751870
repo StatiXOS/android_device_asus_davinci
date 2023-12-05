@@ -34,6 +34,24 @@
       "parentUuid": "5ddbef5e_4f360cf0",
       "revId": "3e3afe1bd355d7b4ffcd8308ac2f185d48751870",
       "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f658842b_ffb9782f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000125
+      },
+      "writtenOn": "2023-12-05T13:08:35Z",
+      "side": 1,
+      "message": "Sure, but let’s see if December ASB will have it merged or not :D",
+      "parentUuid": "4a68b148_06cd17b6",
+      "revId": "3e3afe1bd355d7b4ffcd8308ac2f185d48751870",
+      "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
     }
   ]
 }
