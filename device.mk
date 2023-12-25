@@ -363,9 +363,7 @@ PRODUCT_PACKAGES += \
     libqti_vndfwk_detect_vendor
 
 # Protobuf
-PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full-3.9.1-vendorcompat \
-    libprotobuf-cpp-lite-3.9.1-vendorcompat
+PRODUCT_PACKAGES += libprotobuf-cpp-full-3.9.1-vendorcompat
 
 # Ramdisk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
