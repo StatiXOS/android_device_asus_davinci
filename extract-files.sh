@@ -63,7 +63,7 @@ function blob_fixup() {
             sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
             ;;
         vendor/lib64/libQnnGpu.so)
-            "${ANDROID_ROOT}"/prebuilts/clang/host/linux-x86/clang-r450784d/bin/llvm-strip "${2}"
+            llvm-strip "${2}"
             ;;
         # Patch any old blobs that depend on libprotobuf-lite.
         vendor/lib64/*.so | vendor/lib64/bin/sensors.qti)
