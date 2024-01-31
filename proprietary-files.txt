@@ -258,7 +258,6 @@ vendor/etc/vintf/manifest/manifest_non_qmaa.xml
 vendor/etc/vintf/manifest/manifest_non_qmaa_extn.xml
 vendor/etc/audio_effects.xml
 vendor/lib64/hw/audio.primary.taro.so
-vendor/lib64/hw/sound_trigger.primary.taro.so
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libqcompostprocbundle.so
 vendor/lib64/soundfx/libqcomvisualizer.so
@@ -849,9 +848,6 @@ vendor/lib64/vendor.display.color@1.7.so
 vendor/lib64/vendor.display.postproc@1.0.so
 
 # Display (OSS)
-vendor/bin/hw/vendor.qti.hardware.display.composer-service
-vendor/lib64/libsdedrm.so
-vendor/lib64/libsdmcore.so
 
 # Display (Pixelworks)
 vendor/bin/hw/vendor.pixelworks.hardware.display.iris-service
@@ -924,7 +920,6 @@ vendor/etc/firmware_8475/goodixfp64.b06
 vendor/etc/firmware_8475/goodixfp64.b07
 vendor/etc/firmware_8475/goodixfp64.b08
 vendor/etc/firmware_8475/goodixfp64.mdt
-vendor/lib64/hw/fingerprint.default.so
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixhwfingerprint.so
@@ -1040,7 +1035,6 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 
 # Init
-vendor/bin/init.class_main.sh	
 vendor/bin/init.crda.sh	
 vendor/bin/init.kernel.post_boot-cape.sh	
 vendor/bin/init.kernel.post_boot-diwali.sh	
@@ -1067,7 +1061,6 @@ vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti
 vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc
-vendor/etc/permissions/android.hardware.hardware_keystore.xml
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterprovision.so
@@ -1257,13 +1250,6 @@ vendor/lib/libqti-util.so
 vendor/lib/libqti-utils.so
 vendor/lib/vendor.qti.hardware.iop@1.0.so
 vendor/lib/vendor.qti.hardware.iop@2.0.so
-vendor/lib/vendor.qti.hardware.perf@2.0.so
-vendor/lib/vendor.qti.hardware.perf@2.1.so
-vendor/lib/vendor.qti.hardware.perf@2.2.so
-vendor/lib/vendor.qti.hardware.perf@2.3.so
-vendor/lib/vendor.qti.hardware.servicetracker@1.0.so
-vendor/lib/vendor.qti.hardware.servicetracker@1.1.so
-vendor/lib/vendor.qti.hardware.servicetracker@1.2.so
 vendor/lib/vendor.qti.hardware.power.powermodule@1.0.so
 vendor/lib/vendor.qti.memory.pasrmanager@1.0.so
 vendor/lib/vendor.qti.memory.pasrmanager@1.1.so
@@ -1290,13 +1276,6 @@ vendor/lib64/libsplh.so
 vendor/lib64/libvideooptfeature.so
 vendor/lib64/vendor.qti.hardware.iop@1.0.so
 vendor/lib64/vendor.qti.hardware.iop@2.0.so
-vendor/lib64/vendor.qti.hardware.perf@2.0.so
-vendor/lib64/vendor.qti.hardware.perf@2.1.so
-vendor/lib64/vendor.qti.hardware.perf@2.2.so
-vendor/lib64/vendor.qti.hardware.perf@2.3.so
-vendor/lib64/vendor.qti.hardware.servicetracker@1.0.so
-vendor/lib64/vendor.qti.hardware.servicetracker@1.1.so
-vendor/lib64/vendor.qti.hardware.servicetracker@1.2.so
 vendor/lib64/vendor.qti.hardware.power.powermodule@1.0.so
 vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
 vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so
