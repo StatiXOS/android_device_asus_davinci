@@ -1390,7 +1390,6 @@ vendor/etc/seccomp_policy/modemManager.policy
 vendor/etc/seccomp_policy/qcrilnr@2.0.policy
 vendor/etc/vintf/manifest/qtiradio-saidl.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.ims.xml
-vendor/etc/ecc_list.json
 vendor/etc/telephony_packages.xml
 vendor/lib64/deviceInfoServiceModuleNr.so
 vendor/lib64/libQtiRilLoadable.so
