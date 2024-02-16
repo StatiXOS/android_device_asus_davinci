@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from Zenfone 9 (33.0804.2060.204). OTAs to extract from can be found
+## are from Zenfone 9 (34.0304.2004.75). OTAs to extract from can be found
 ## here: https://www.asus.com/Mobile/Phones/ZenFone/Zenfone-9/HelpDesk_Download
 
 # ADSPRPC
@@ -987,8 +987,8 @@ vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so|ef866bab2186db1b2c09477e36fef2
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.1.so|0677ebfe099cdaa6c3776d0bd5318044a4220918
 
 # Hotword Enrollment
-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
+product/priv-app/HotwordEnrollmentXGoogleHEXAGON_NARROWBAND/HotwordEnrollmentXGoogleHEXAGON_NARROWBAND.apk
+product/priv-app/HotwordEnrollmentXGoogleHEXAGON_NARROWBAND/HotwordEnrollmentXGoogleHEXAGON_NARROWBAND.apk
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
