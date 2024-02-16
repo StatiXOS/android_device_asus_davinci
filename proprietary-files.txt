@@ -198,30 +198,30 @@ vendor/firmware/a730_zap.mbn
 vendor/firmware/a730_zap.mdt
 vendor/firmware/gmu_gen70000.bin
 
-# Adreno (Drivers) - V615.77
+# Adreno (Drivers) - V615.80
 vendor/gpu/kbc/sequence_manifest.bin|17e1f9149826ef478502c750bcf9352274097c80
 vendor/gpu/kbc/unified_kbcs_32.bin|aa7b4e916fb3fab8df7700deb458d0726a549482
 vendor/gpu/kbc/unified_kbcs_64.bin|bdfadc6b8e03d7da5b8d31b4f7688e7dba4b07ce
 vendor/gpu/kbc/unified_ksqs.bin|e3470ad9fc644aea9c02dee948bb210149408dda
-vendor/lib64/egl/eglSubDriverAndroid.so|d9469d1e07dd1155528778f0a453ad791ceadbbc
-vendor/lib64/egl/libEGL_adreno.so|847a858ccdb30a2e4b24060b287345820e2edd18
+vendor/lib64/egl/eglSubDriverAndroid.so|167c573149e046b23280cba9f778861f5f6a5a0c
+vendor/lib64/egl/libEGL_adreno.so|579730142b5d41bd890530861cb8efdeef4b83e9
 vendor/lib64/egl/libGLESv1_CM_adreno.so|29a64765d2b5d35261ec98ed68031d5699954307
-vendor/lib64/egl/libGLESv2_adreno.so|32b8d45cbab2d7f3bb22e42f701cecaaa913b201
-vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so|aa8be80d62a75743e389055eebdb4250ad42524b
+vendor/lib64/egl/libGLESv2_adreno.so|f235353c203c58c6a5a46541635f6b10e7d403f6
+vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so|996ad971d7faa49ff7eafb4fd4172d7b0b97afc3
 vendor/lib64/egl/libq3dtools_adreno.so|7b1bca9132cb906613aac175b2fa9cc3eda3a55f
-vendor/lib64/egl/libq3dtools_esx.so|45ce512fde1a91efffe18299e1a9703cdbac5df8
-vendor/lib64/hw/vulkan.adreno.so|7d833bbdf708a8073b5ad90af3755684c28cfee3
-vendor/lib64/libCB.so|45c3c566fb4783434e398d0c03782266b89c6a2a
+vendor/lib64/egl/libq3dtools_esx.so|427eafa5f537e8cea4414d7c844a64373569c406
+vendor/lib64/hw/vulkan.adreno.so|7742d95240f4dc244d0455321414c786f4ddc0e7
+vendor/lib64/libCB.so|9476548f391a2f5a938cdf35f52e7842dcf6a45e
 vendor/lib64/libOpenCL.so|454b8aaada3a5c449ae90e2232eb761e743fda06
-vendor/lib64/libadreno_app_profiles.so|8c65968c2c4fc05ea7472d5210daba235ed2f0c3
-vendor/lib64/libadreno_utils.so|ebedd731f942c2d2ac45633534dca5bf6c587e67
-vendor/lib64/libgpudataproducer.so|706a2b732a632734c04f27ede9cceaf973a389fe
-vendor/lib64/libgsl.so|00bfeba2870b764243f789d845992249b1c25cb3
-vendor/lib64/libkcl.so|6f9ca360dca91f39a79d7c9fea01f4f7a4914f62
-vendor/lib64/libkernelmanager.so|f98c017f4cf7566c7e31d3748a0e51aa09cc6735
-vendor/lib64/libllvm-glnext.so|9e8d7cf801c883277dd29aa315f81cda4cc99073
+vendor/lib64/libadreno_app_profiles.so|d269f827f4d8a7a5b8285be842d9d0a9c00149e8
+vendor/lib64/libadreno_utils.so|ad5198664fa2c1f452dd26f6f3c5f5d733ca96ed
+vendor/lib64/libgpudataproducer.so|069924cf3c7f49d6a1dd6c2bca9d95534c0174cf
+vendor/lib64/libgsl.so|8ed4707555159ab14b6f1a94364589c20fa128cc
+vendor/lib64/libkcl.so|7aec2fb40c892517dc29a46a53b8578ba5bd5207
+vendor/lib64/libkernelmanager.so|020570319f0980c97d44efb8f00ee8df0b030f9d
+vendor/lib64/libllvm-glnext.so|45218cac454ceef9291027757d58399aa2e68e2a
 vendor/lib64/libllvm-qcom.so|210fdef3513ca2dc022e54b50779c0024a6c6730
-vendor/lib64/libllvm-qgl.so|886ada07280b527196c7669caa62ec7e3d938fa9
+vendor/lib64/libllvm-qgl.so|7e6b2e061ebe41bf8e37f96a2ba60bcc2c7e73ba
 
 # Audio
 vendor/bin/agmcap
