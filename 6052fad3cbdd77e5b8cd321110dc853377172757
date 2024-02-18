@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "be97766e_710f064a",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 3
+      },
+      "lineNbr": 1194,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-02-18T15:40:15Z",
+      "side": 1,
+      "message": "why aren\u0027t we building this from src",
+      "range": {
+        "startLine": 1193,
+        "startChar": 0,
+        "endLine": 1194,
+        "endChar": 57
+      },
+      "revId": "6052fad3cbdd77e5b8cd321110dc853377172757",
+      "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
+    }
+  ]
+}
