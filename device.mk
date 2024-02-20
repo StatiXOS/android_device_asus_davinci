@@ -350,6 +350,9 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Pixel Launcher
 INCLUDE_PIXEL_LAUNCHER := true
 
+# Perf
+PRODUCT_PACKAGES += libqti-perfd-client
+
 # Power
 $(call inherit-product, vendor/qcom/opensource/power/power-vendor-product.mk)
 
