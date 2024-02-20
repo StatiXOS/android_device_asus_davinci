@@ -1,0 +1,14 @@
+[
+  {
+    "remote":      "gitea",
+    "repository":  "sourajitk/davinci-vendor",
+    "target_path": "vendor/asus/davinci",
+    "revision":    "udc"
+  },
+  {
+    "remote":       "gitlab",
+    "repository":   "StatiXOS/davinci-kernel/prebuilts_msm-5.10",
+    "target_path":  "device/asus/davinci-kernel",
+    "revision":     "udc"
+  }
+]
