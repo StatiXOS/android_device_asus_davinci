@@ -23,6 +23,10 @@ genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qco
 genfscon sysfs /devices/platform/soc/soc:spf_core_platform/soc:spf_core_platform:lpass-cdc/wcd938x-codec/extcon/extcon2/cable.3/name     u:object_r:sysfs_extcon:s0
 genfscon sysfs /devices/platform/soc/soc:spf_core_platform/soc:spf_core_platform:lpass-cdc/wcd938x-codec/extcon/extcon2/cable.1/name     u:object_r:sysfs_extcon:s0
 
+# Perfmgr
+genfscon proc /sys/kernel/sched_energy_aware                         u:object_r:proc_sched:s0
+genfscon sysfs /devices/platform/soc/1d84000.ufshc/clkgate_enable    u:object_r:vendor_sysfs_scsi_host:s0
+
 # Wakeup
 genfscon sysfs /devices/platform/soc/a84000.i2c/i2c-2/2-0029/wakeup/wakeup                                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:goodix_gf3626@0/wakeup/wakeup                                          u:object_r:sysfs_wakeup:s0
