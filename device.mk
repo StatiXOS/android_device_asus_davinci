@@ -316,7 +316,9 @@ PRODUCT_COPY_FILES += \
 
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/google/interfaces \
+    hardware/google/pixel
 
 # Networking
 PRODUCT_PACKAGES += \
@@ -354,7 +356,9 @@ INCLUDE_PIXEL_LAUNCHER := true
 PRODUCT_PACKAGES += libqti-perfd-client
 
 # Power
-PRODUCT_PACKAGES += android.hardware.power-service.davinci-libperfmgr
+PRODUCT_PACKAGES += \
+    android.hardware.power-service.davinci-libperfmgr \
+    android.hardware.power.stats@1.0
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
