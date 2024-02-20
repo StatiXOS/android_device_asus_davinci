@@ -354,7 +354,11 @@ INCLUDE_PIXEL_LAUNCHER := true
 PRODUCT_PACKAGES += libqti-perfd-client
 
 # Power
-$(call inherit-product, vendor/qcom/opensource/power/power-vendor-product.mk)
+$(call inherit-product, $(LOCAL_PATH)/power-libperfmgr/power-libperfmgr.mk)
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
